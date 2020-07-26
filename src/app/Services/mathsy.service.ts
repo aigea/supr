@@ -6,6 +6,8 @@ import * as mathsy from 'mathjs';
 })
 export class MathsyService {
 
+  error: String;
+
   constructor() { }
 
   isValidMathExpression(mathsyExpression: string) : boolean {
@@ -14,7 +16,8 @@ export class MathsyService {
       mathsy.parse(mathsyExpression);
       return true;
       
-    } catch (error) {    
+    } catch (error) {
+      this.error = error;    
       return false;
     }
 

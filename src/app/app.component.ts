@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-super-app';
+
+  evaluatedExpressions = [];
+
+  displayData(value) {
+    alert(JSON.stringify(value));
+  }
+
 }
+
