@@ -20,6 +20,18 @@ export class MathsyService {
 
   }
 
+  evaluateExpression(mathsyExpression: string) {
+    
+    if (this.isValidMathExpression(mathsyExpression)) {
+      
+      return mathsy.evaluate(mathsyExpression);
+      
+    } else {
+      console.log("Expression not Valid")
+    }
+
+  }
+
 
 
 
