@@ -43,5 +43,9 @@ describe('MathsyService', () => {
     expect(service.isValidMathExpression("3+")).toBeFalsy();
   });
 
+  it('sin(30) + cos(20) should be approximately equal to −0.5799495623', () => {
+    expect(service.evaluateExpression("sin(30) + cos(20)")).toBeCloseTo(-0.5799495623);
+  });
+
 
 });
